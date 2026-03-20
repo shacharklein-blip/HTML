@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloak Page</title>
+    <title>Loading...</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        iframe { width: 100%; height: 100vh; border: none; display: block; }
+    </style>
 </head>
 <body>
+    <iframe src="https://app.slack.com/" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe>
     <script>
-        // Function to open a cloaked window
-        function openCloakedWindow(url) {
-            window.open(url, '_blank');
-        }
-
-        // Function to replace URL display with an iframe
-        function cloakWithIframe(url) {
-            var iframe = document.createElement('iframe');
-            iframe.style.width = '100%';
-            iframe.style.height = '100vh';
-            iframe.src = url;
-            document.body.innerHTML = ''; // Clear existing content
-            document.body.appendChild(iframe);
-        }
+        // Attempt to cloak the URL
+        window.history.replaceState({}, '', 'about:blank');
     </script>
 </body>
 </html>
