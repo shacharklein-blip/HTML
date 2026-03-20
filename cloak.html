@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloak Page</title>
+</head>
+<body>
+    <script>
+        // Function to open a cloaked window
+        function openCloakedWindow(url) {
+            window.open(url, '_blank');
+        }
+
+        // Function to replace URL display with an iframe
+        function cloakWithIframe(url) {
+            var iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '100vh';
+            iframe.src = url;
+            document.body.innerHTML = ''; // Clear existing content
+            document.body.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>
